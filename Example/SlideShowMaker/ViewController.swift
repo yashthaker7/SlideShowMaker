@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         if let audioURL = Bundle.main.url(forResource: "Sound", withExtension: "mp3") {
             audio = AVURLAsset(url: audioURL)
             let audioDuration = CMTime(seconds: 30, preferredTimescale: audio!.duration.timescale)
-            timeRange = CMTimeRange(start: kCMTimeZero, duration: audioDuration)
+            timeRange = CMTimeRange(start: CMTime.zero, duration: audioDuration)
         }
         
         // OR: VideoMaker(images: images, movement: ImageMovement.fade)
